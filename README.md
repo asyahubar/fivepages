@@ -2,8 +2,8 @@
 
 ### Routes
 
-*`/`
-*`/about`
-*`/contact`
-*`/products`
-*`/services`
+* `/`
+* `/about`
+* `/contact`
+* `/products`
+* `/services`
