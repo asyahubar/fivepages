@@ -71,11 +71,11 @@
         </div>
 
         <div class="links">
-            <a href="/">Homepage</a>
-            <a href="/products">Products</a>
-            <a href="/services">Services</a>
-            <a href="/contact">Contact</a>
-            <a href="/about">About</a>
+            <a href="{{ route('home') }}">Homepage</a>
+            <a href="{{ route('products') }}">Products</a>
+            <a href="{{ route('services') }}">Services</a>
+            <a href="{{ route('contact') }}">Contact</a>
+            <a href="{{ route('aboutus') }}">About</a>
         </div>
 
         <div class="info">
