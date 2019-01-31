@@ -30,3 +30,18 @@ Route::get('/products', function () {
 Route::get('/services', function () {
     return view('services');
 })->name('services');
+
+Route::get('/cats', function () {
+    $cats = \App\Cat::all();
+    foreach ($cats as $cat) {
+        echo $cat->name . "<br>";
+    };
+
+    echo "<br>";
+    echo "<br>";
+
+//    $cat17 = \App\Cat::create(['name' => 'Bob', 'age' => 4, 'gender' => 'female']);
+
+
+//    return view('cats');
+})->name('cats');
