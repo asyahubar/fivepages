@@ -40,7 +40,7 @@ Route::get('/cats', function () {
     echo "<br>";
     echo "<br>";
 
-//    $cat17 = \App\Cat::create(['name' => 'Bob', 'age' => 4, 'gender' => 'female']);
+    $cat17 = \App\Cat::create(['name' => 'Bob', 'age' => 4, 'gender' => 'female']);
 
 
 //    return view('cats');
