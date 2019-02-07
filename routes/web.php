@@ -31,6 +31,14 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
+Route::get('/todo', function () {
+    return view('todos');
+})->name('todo');
+
+Route::get('todo/{id}', function ($id) {
+    return view('todo', $id);
+});
+
 Route::get('/cats', function () {
     $cats = \App\Cat::all();
     foreach ($cats as $cat) {

@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     use Notifiable;
-    use SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -22,8 +21,8 @@ class Article extends Model
     protected static function boot ()
     {
         parent::boot();
-
-        static::addGlobalScope(new ArticleScope);
+//
+//        static::addGlobalScope(new ArticleScope);
     }
 
     /**

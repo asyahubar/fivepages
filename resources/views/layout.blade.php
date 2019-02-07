@@ -81,6 +81,13 @@
         <div class="info">
             @yield('info')
         </div>
+
     </div>
+</div>
+<div class="todos">
+    @yield('todos')
+</div>
+<div class="todo">
+    @yield('todo')
 </div>
 </body>
