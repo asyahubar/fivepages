@@ -36,7 +36,8 @@ Route::get('/todo', function () {
 })->name('todo');
 
 Route::get('todo/{id}', function ($id) {
-    return view('todo', $id);
+    $todo = \App\Todo::find($id);
+    return view('todo', compact('todo'));
 });
 
 Route::get('/cats', function () {
