@@ -76,6 +76,7 @@
             <a href="{{ route('services') }}">Services</a>
             <a href="{{ route('contact') }}">Contact</a>
             <a href="{{ route('aboutus') }}">About</a>
+            <a href="{{ route('todo') }}">Todo</a>
         </div>
 
         <div class="info">

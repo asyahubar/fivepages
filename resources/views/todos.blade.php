@@ -2,10 +2,6 @@
 
 @section('todos')
 
-    @php
-    $todos = \App\Todo::all();
-    @endphp
-
     <table>
         <tr>
             <th>Status</th>
@@ -18,7 +14,7 @@
                     {{ $todo->status }}
                 </td>
                 <td>
-                    <a href="http://ah-fivepages.test/todo/{{ $todo->id }}">
+                    <a href="/todo/{{ $todo->id }}">
                         {{ $todo->title }}
                     </a>
                 </td>

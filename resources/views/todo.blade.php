@@ -1,16 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <p>{{$todo->title}}</p>
-</body>
-</html>
+@extends('layout')
 
-
+@section('todo')
+	<p><em>{{$todo->title}}</em></p>
+	<p>Description: {{$todo->body}}</p>
+	<p>Status: {{$todo->status}}</p>
+	<p>Date: {{$todo->date}}</p>
+@endsection
 

@@ -32,7 +32,8 @@ Route::get('/services', function () {
 })->name('services');
 
 Route::get('/todo', function () {
-    return view('todos');
+    $todos = \App\Todo::all();
+    return view('todos', compact('todos'));
 })->name('todo');
 
 Route::get('todo/{id}', function ($id) {
