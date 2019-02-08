@@ -11,6 +11,10 @@
 |
 */
 
+/*
+ * Fixed routes should go before the ones with variable
+ */
+
 Route::get('/', function () {
     return view('home');
 })->name('home');
@@ -31,15 +35,13 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
-Route::get('/todo', function () {
-    $todos = \App\Todo::all();
-    return view('todos', compact('todos'));
-})->name('todo');
+Route::get('/todo', 'TodosController@index')->name('todo');
 
-Route::get('todo/{id}', function ($id) {
-    $todo = \App\Todo::find($id);
-    return view('todo', compact('todo'));
-});
+Route::get('/todo/create', 'TodosController@create');
+
+Route::post('/todo', 'TodosController@store');
+
+Route::get('todo/{id}', 'TodosController@show');
 
 Route::get('/cats', function () {
     $cats = \App\Cat::all();
@@ -55,3 +57,6 @@ Route::get('/cats', function () {
 
 //    return view('cats');
 })->name('cats');
+
+Route::get('articles', 'ArticlesController@index')->name('articles');
+Route::get('article/{id}', 'ArticlesController@show');

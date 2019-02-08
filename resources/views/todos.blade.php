@@ -2,6 +2,8 @@
 
 @section('todos')
 
+    <p><a href="/todo/create">New task</a></p>
+
     <table>
         <tr>
             <th>Status</th>
